@@ -1,0 +1,33 @@
+# Covariance
+
+import pandas as pd
+import seaborn as sns
+
+We are going to carry out a study in which we will analyze the impact of drinking soft drinks, in particular Cola, and weight gain.
+The study will be carried out on 7 people who will have a different consumption of cans during the period of time.
+Participants will have to weigh themselves again to assess the impact of soft drinks, in particular Cola, on their weight gain.
+
+#Create Variables
+
+weight_gain = [10, 12, 14, 16, 18, 20, 24]
+Cola_consumption = [30, 35, 40, 45, 50, 55, 65]
+
+x = weight_gain
+y = Cola_consumption
+
+#Create DF
+
+cv =pd.DataFrame ({"weight_gain" : x,
+      "Cola_consumption" : y})
+      
+#Covariance :
+
+sns.scatterplot(x=weight_gain, y=Cola_consumption, data= cv)
+
+cv.cov()
+
+#Correlation 
+
+cv.corr()
+
+sns.heatmap(cv)
