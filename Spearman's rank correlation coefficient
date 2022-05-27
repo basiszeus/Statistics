@@ -1,0 +1,17 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import scipy.stats as st
+
+
+student_score = {"Biology" : [72,60,55,73,75,53,74,69,63,77,58,76],
+                "Chemistry": [63,61,57,68,78,58,72,62,60,87,59,76]}
+
+
+df = pd.DataFrame(student_score)
+
+
+sns.scatterplot(x="Biology", y = "Chemistry", data = df)
+
+
+st.spearmanr(df['Biology'],df['Chemistry'])
