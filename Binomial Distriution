@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+from scipy.stats import binom
+import seaborn as sns
+import pandas as pd
+
+
+#Playstation
+
+
+PS0 = binom.pmf(k=0,n=7,p=0.5)
+PS1 = binom.pmf(k=1,n=7,p=0.5)
+PS2 = binom.pmf(k=2,n=7,p=0.5)
+PS3 = binom.pmf(k=3,n=7,p=0.5)
+PS4 = binom.pmf(k=4,n=7,p=0.5)
+PS5 = binom.pmf(k=5,n=7,p=0.5)
+PS6 = binom.pmf(k=6,n=7,p=0.5)
+PS7 = binom.pmf(k=7,n=7,p=0.5)
+
+
+#Xbox
+
+
+XB0 = binom.pmf(k=7,n=7,p=0.5)
+XB1 = binom.pmf(k=6,n=7,p=0.5)
+XB2 = binom.pmf(k=5,n=7,p=0.5)
+XB3 = binom.pmf(k=4,n=7,p=0.5)
+XB4 = binom.pmf(k=3,n=7,p=0.5)
+XB5 = binom.pmf(k=2,n=7,p=0.5)
+XB6 = binom.pmf(k=1,n=7,p=0.5)
+XB7 = binom.pmf(k=0,n=7,p=0.5)
+
+
+PS = [PS0,PS1,PS2,PS3,PS4,PS5,PS6,PS7]
+k = [0,1,2,3,4,5,6,7]
+XB = [XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7]
+
+
+#DF
+
+
+df2 =pd.DataFrame ({"K" : k,"PlayStation Probabilities" : PS,"Xbox Probabilities" : XB})
+
+
+#Visualization
+
+
+sns.displot(data=df,x='K',y='PlayStation Probabilities',bins=8)
