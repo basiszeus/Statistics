@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+
+from scipy.stats import bernoulli
+import seaborn as sns
+
+
+p = 0.2
+Bernoulli = bernoulli.rvs(size=100,p=p)
+
+
+VB= sns.distplot(Bernoulli,
+                kde=True,
+                color='green'
+                )
+VB.set(xlabel ='Bernoulli',ylabel='Frequency')
