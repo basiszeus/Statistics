@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+
+from scipy.stats import poisson
+
+
+# P(X = 14)
+poisson.pmf(k=14,mu=15)
+
+
+# P(X>=10)
+1-poisson.cdf(k=9,mu=15)
+
+
+# P(X>=5)
+1- poisson.cdf(k=4,mu=5)
