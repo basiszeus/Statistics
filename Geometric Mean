@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+import scipy 
+from scipy import stats
+
+X = (0.1,0.12,0.13,0.14,0.2)
+
+Gx = st.stats.mstats.gmean(X, axis=0, dtype=None, weights=None)*100
+Gx
