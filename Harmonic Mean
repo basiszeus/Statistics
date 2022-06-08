@@ -7,9 +7,3 @@ from scipy.stats import hmean
 X = (10,14)
 
 hmean(X)
-
-
-
-
-
-
