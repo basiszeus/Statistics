@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+import pandas as pd
+import scipy.stats as st
+
+q = {'X': [6,8,5,2], 'Y': [8,4,9,6]}
+dfa = pd.DataFrame(data=q)
+
+
+st.kendalltau(q['X'],q['Y'])
