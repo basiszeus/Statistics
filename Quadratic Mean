@@ -1,0 +1,22 @@
+
+
+import numpy as np
+
+
+X = [2,3,4,7,8]
+
+
+squared_X = [x ** 2 for x in X]
+squared_X
+
+
+sum_squared = np.sum(squared_X)
+sum_squared
+
+
+a = sum_squared/len(X)
+a
+
+
+rms = np.sqrt(a)
+rms
