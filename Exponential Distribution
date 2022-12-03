@@ -1,0 +1,10 @@
+from scipy.stats import expon
+
+# P (X<10)
+expon.cdf(x=10,scale =20)
+
+# P (X>20)
+expon.sf(20,scale =20)
+
+# P(5<x<10) = P(x<10) - P(x<5)
+l = expon.cdf(x=10,scale =20)-expon.cdf(x=5,scale =20)
