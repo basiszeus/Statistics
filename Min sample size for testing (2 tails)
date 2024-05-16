@@ -1,0 +1,23 @@
+from scipy.stats import norm
+import math
+
+def calculate_min_sample_size(sigma1_sq, sigma2_sq, alpha, beta, delta):
+    z_alpha_over_2 = norm.ppf(1 - alpha/2)
+    z_beta = norm.ppf(1 - beta)
+    
+    numerator = (sigma1_sq + sigma2_sq) * (z_alpha_over_2 + z_beta)**2
+    denominator = delta**2
+    
+    min_sample_size = math.ceil(numerator / denominator)
+    
+    return min_sample_size
+
+# Given parameters
+sigma1_sq = 0.025
+sigma2_sq = 0.035
+alpha = 0.05
+beta = 0.2
+delta = 0.02
+
+min_sample_size = calculate_min_sample_size(sigma1_sq, sigma2_sq, alpha, beta, delta)
+print("Minimum sample size:", min_sample_size)
