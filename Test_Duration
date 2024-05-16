@@ -1,0 +1,9 @@
+def calculate_test_duration(min_sample_size, tests_per_day):
+    duration = min_sample_size / tests_per_day
+    return duration
+
+min_sample_size = 1178
+tests_per_day = 20
+
+test_duration = calculate_test_duration(min_sample_size, tests_per_day)
+print("Duration of the test (in days):", test_duration)
