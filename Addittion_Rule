@@ -1,0 +1,17 @@
+# Link to the article : https://medium.com/@soulawalid/data-science-addition-rule-137debc14740?sk=ca89196cf94d4470bc5c919112521c31
+
+
+total_people = 200
+total_passed = 169
+total_women = 100
+women_passed = 92
+
+
+prob_passed = total_passed / total_people
+prob_passed#0.845
+
+prob_woman = total_women / total_people
+prob_woman # 0.5
+
+prob_passed_or_woman = prob_passed + prob_woman - prob_woman_passed
+prob_passed_or_woman #0.89
